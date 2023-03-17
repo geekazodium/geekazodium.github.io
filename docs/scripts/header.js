@@ -1,17 +1,29 @@
-function geekaHeader(){
+function geekaHeader(path){
     var header = `
     <div class="header">
         <ol>
             <a href="index.html"><li>home</li></a>
-            <a href="index.html"><li>About Me</li></a>
-            <a href="index.html"><li>My Projects</li></a>
+            <a href="pages/project.html"><li>About Me</li></a>
+            <a href="pages/project.html"><li>My Projects</li></a>
         </ol>
     </div>
     `;
+    var h;
+    header.split('a href="').forEach(s => {
+        if(h == undefined){
+            h = s;
+        }else{
+            h = h.concat('a href="'+path,s);
+        }
+    });
+    header = h;
+    console.log(header);
     return header;
 }
 
 document.addEventListener("DOMContentLoaded",(event)=>{
     var html = document.body.innerHTML;
-    document.body.innerHTML = geekaHeader()+html;
+    var path = window.location.href.split("geekazodium.github.io/");
+    var back = path[1].split("/").length-2;
+    document.body.innerHTML = geekaHeader("../".repeat(back))+html;
 });
