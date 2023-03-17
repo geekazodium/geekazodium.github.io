@@ -16,9 +16,7 @@ function geekaHeader(path){
             h = h.concat('a href="'+path,s);
         }
     });
-    header = h;
-    console.log(header);
-    return header;
+    return h;
 }
 
 document.addEventListener("DOMContentLoaded",(event)=>{
