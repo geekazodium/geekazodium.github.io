@@ -1,12 +1,14 @@
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-top: 60px;
+    text-shadow: 1px 1px 2px black;
+    background-color: pink;
 }
 
 .header{
     box-sizing: border-box; 
     z-index: 10;
-    background-color: lightpink; 
+    background-color:rgb(201, 67, 130); 
     height: 60px;
     width: 100%;
     top: 0px;
@@ -47,7 +49,8 @@ body{
 }
 
 .page{
-    background-color: pink;
+    color: white;
+    background-color:rgb(206, 114, 157);
     display: flex;
     align-content: center;
     margin-left: auto;

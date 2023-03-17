@@ -15,14 +15,14 @@
 }
 
 .projects a{
-    background-color: lightpink;
+    background-color:rgb(223, 143, 176);
     margin: 20px;
     border-radius: 20px;
     width: calc(100% - 40px);
 }
 
 .projects a :hover{
-    background-color: rgb(255, 161, 192);
+    background-color: rgb(207, 109, 147);
     border-radius: 20px;
 }
 
@@ -48,11 +48,11 @@
     padding: 10px;
     border-bottom-right-radius: 18px;
     border-bottom-left-radius: 18px;
-    background-color: lightcoral;
+    background-color:rgb(209, 120, 154);
 }
 
 .projects a li div:hover{
-    background-color: lightcoral;
+    background-color:rgb(209, 120, 154);
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
     border-bottom-right-radius: 18px;
