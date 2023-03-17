@@ -46,22 +46,6 @@ body{
     color: white;
 }
 
-.paragraph{
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-}
-
-.imgL{
-    width: max-content;
-    height: max-content;
-    margin: 2.75ch;
-    scale: 1.5;
-}
-.textR{
-    padding-left: 30px;
-}
-
 .page{
     background-color: pink;
     display: flex;
@@ -71,4 +55,5 @@ body{
     min-height: 100vh;
     padding: 20px;
     max-width: 820px;
+    border-radius: 15px;
 }

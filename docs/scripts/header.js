@@ -3,8 +3,8 @@ function geekaHeader(path){
     <div class="header">
         <ol>
             <a href="index.html"><li>home</li></a>
-            <a href="pages/project.html"><li>About Me</li></a>
-            <a href="pages/project.html"><li>My Projects</li></a>
+            <a href="pages/projects.html"><li>About Me</li></a>
+            <a href="pages/projects.html"><li>My Projects</li></a>
         </ol>
     </div>
     `;

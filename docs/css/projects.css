@@ -1,0 +1,60 @@
+.projects{
+    display: grid;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    text-decoration: none;
+    list-style: none;
+}
+
+@media only screen and (max-width: 720px) {
+    .projects{
+        grid-template-columns: 1fr;
+    }
+}
+
+.projects a{
+    background-color: lightpink;
+    margin: 20px;
+    border-radius: 20px;
+    width: calc(100% - 40px);
+}
+
+.projects a :hover{
+    background-color: rgb(255, 161, 192);
+    border-radius: 20px;
+}
+
+.projects a li{
+    position:relative;
+    height: 100%;
+    min-height: 200px;
+    width: 100%;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.projects a li div{
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    width: calc(100% - 20px);
+    max-height: 50px;
+    padding: 10px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    background-color: lightcoral;
+}
+
+.projects a li div:hover{
+    background-color: lightcoral;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
