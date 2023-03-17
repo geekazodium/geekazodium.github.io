@@ -22,6 +22,10 @@ function geekaHeader(path){
 document.addEventListener("DOMContentLoaded",(event)=>{
     var html = document.body.innerHTML;
     var path = window.location.href.split("geekazodium.github.io/");
-    var back = path[1].split("/").length-2;
+    var d = 1;
+    if(!(path[0].includes("http://")||path[0].includes("https://"))){
+        d = 2;
+    }
+    var back = path[1].split("/").length-d;
     document.body.innerHTML = geekaHeader("../".repeat(back))+html;
 });
