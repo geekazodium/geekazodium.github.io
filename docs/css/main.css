@@ -3,6 +3,7 @@ body{
     padding-top: 60px;
     text-shadow: 1px 1px 2px black;
     background-color: pink;
+    margin: 10px;
 }
 
 .header{
@@ -59,4 +60,41 @@ body{
     padding: 20px;
     max-width: 820px;
     border-radius: 15px;
+}
+
+.pageEnd{
+    box-sizing: border-box; 
+    z-index: 10;
+    background-color:rgb(201, 67, 130); 
+    min-height: 100px;
+    width: calc(100% + 20px);
+    margin-top: 10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    margin-left: -10px;
+    padding: 20px;
+}
+
+.pageEnd ol{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    list-style: none;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pageEnd ol a{
+    height: 35px;
+}
+
+.pageEnd ol a :hover{
+    color: azure;
+}
+
+.pageEnd ol a li{
+    user-select: none;
+    padding-left: 10px;
+    padding-top: 0.5em;
+    vertical-align: middle;
 }
