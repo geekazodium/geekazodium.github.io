@@ -75,24 +75,33 @@ body{
     padding: 20px;
 }
 
-.pageEnd ol{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+.pageEnd b{
+    display: flex;
+    flex-direction: row;
     list-style: none;
     padding-top: 0px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.pageEnd ol a{
+.pageEnd b ol{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 20%;
+    list-style: none;
+}
+
+.pageEnd b ol a{
     height: 35px;
 }
 
-.pageEnd ol a :hover{
+.pageEnd b ol a :hover{
     color: azure;
 }
 
-.pageEnd ol a li{
+.pageEnd b ol a li{
     user-select: none;
     padding-left: 10px;
     padding-top: 0.5em;
