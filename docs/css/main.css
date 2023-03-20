@@ -95,6 +95,7 @@ body{
 
 .pageEnd b ol a{
     height: 35px;
+    text-decoration: none;
 }
 
 .pageEnd b ol a :hover{
@@ -102,6 +103,7 @@ body{
 }
 
 .pageEnd b ol a li{
+    color: azure;
     user-select: none;
     padding-left: 10px;
     padding-top: 0.5em;

@@ -1,15 +1,13 @@
 const aboutThis = [
     [
-        ["index.html","About Me"],
-        ["index.html","this"],
-        ["index.html","this"]
+        ["index.html","Home"],
+        ["pages/aboutMe.html","About Me"],
+        ["pages/projects.html","My Projects"]
     ],
     [
-        ["index.html","this"],
+        ["pages/underConstruction.html","Under Construction"],
     ],
     [
-        ["index.html","this"],
-        ["index.html","this"],
     ],
     [
     ],
