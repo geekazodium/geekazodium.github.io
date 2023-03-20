@@ -8,6 +8,7 @@ const aboutThis = [
         ["pages/underConstruction.html","Under Construction"],
     ],
     [
+        ["pages/contacts.html","Contact Me"]
     ],
     [
     ],
@@ -17,9 +18,9 @@ const aboutThis = [
 
 function geekaAbout(path){
     var end = `<div class = "pageEnd"><b>`;
-    aboutThis.forEach((childList)=>{
+    aboutThis.forEach((column)=>{
         end = end + "<ol>";
-        childList.forEach((item)=>{
+        column.forEach((item)=>{
             end = end + "<a href=\""+ item[0] +"\"><li>" + item[1] + "</li></a>";
         });
         end = end + "</ol>";
