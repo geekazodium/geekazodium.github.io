@@ -2,7 +2,8 @@ const aboutThis = [
     [
         ["index.html","Home"],
         ["pages/aboutMe.html","About Me"],
-        ["pages/projects.html","My Projects"]
+        ["pages/projects.html","My Projects"],
+        ["pages/graduationPortfolio/portfolio.html","Graduation Portfolio"]
     ],
     [
         ["pages/underConstruction.html","Under Construction"],
