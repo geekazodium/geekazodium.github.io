@@ -18,33 +18,24 @@ const aboutThis = [
 ];
 
 function geekaAbout(path){
-    var end = `<div class = "pageEnd"><b>`;
+    let end = `<div class = "pageEnd"><b>`;
     aboutThis.forEach((column)=>{
         end = end + "<ol>";
         column.forEach((item)=>{
-            end = end + "<a href=\""+ item[0] +"\"><li>" + item[1] + "</li></a>";
+            end = end + "<a href=\""+ path + item[0] +"\"><li>" + item[1] + "</li></a>";
         });
         end = end + "</ol>";
     });
     end = end+`</b></div>`;
-    var h;
-    end.split('a href="').forEach(s => {
-        if(h == undefined){
-            h = s;
-        }else{
-            h = h.concat('a href="'+path,s);
-        }
-    });
-    return h;
+    return end;
 }
 
 document.addEventListener("DOMContentLoaded",(event)=>{
-    var html = document.body.innerHTML;
-    var path = window.location.href.split("geekazodium.github.io/");
-    var d = 1;
-    if(!(path[0].includes("http://")||path[0].includes("https://"))){
-        d = 2;
-    }
-    var back = path[1].split("/").length-d;
-    document.body.innerHTML = html + geekaAbout("../".repeat(back));
+    let html = document.body.innerHTML;
+    let origin = getOrDefault(window.location.href.match(/(https?:\/\/[a-zA-Z0-9:]+?\/(docs\/)?)/)?.[0],"https://geekazodium.github.io/");
+    document.body.innerHTML = html + geekaAbout(origin);
 });
+
+function getOrDefault(nullable,_default){
+    return (nullable === undefined||nullable === null)?_default:nullable;
+}

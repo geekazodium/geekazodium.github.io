@@ -5,6 +5,7 @@ function geekaHeader(path){
             <a href="index.html"><li>home</li></a>
             <a href="pages/aboutMe.html"><li>About Me</li></a>
             <a href="pages/projects.html"><li>My Projects</li></a>
+            <a href="pages/graduationportfolio/portfolio.html"><li>Graduation Portfolio</li></a>
         </ol>
     </div>
     `;
@@ -21,11 +22,6 @@ function geekaHeader(path){
 
 document.addEventListener("DOMContentLoaded",(event)=>{
     var html = document.body.innerHTML;
-    var path = window.location.href.split("geekazodium.github.io/");
-    var d = 1;
-    if(!(path[0].includes("http://")||path[0].includes("https://"))){
-        d = 2;
-    }
-    var back = path[1].split("/").length-d;
-    document.body.innerHTML = geekaHeader("../".repeat(back))+html;
+    let origin = getOrDefault(window.location.href.match(/(https?:\/\/[a-zA-Z0-9:]+?\/(docs\/)?)/)?.[0],"https://geekazodium.github.io/");
+    document.body.innerHTML = geekaHeader(origin)+html;
 });
