@@ -5,6 +5,7 @@ function geekaHeader(path){
             <a href="index.html"><li>home</li></a>
             <a href="pages/aboutMe.html"><li>About Me</li></a>
             <a href="pages/projects.html"><li>My Projects</li></a>
+            <a href="bio-ia-marker"><li>Bio IA Marker</li></a>
         </ol>
     </div>
     `;
