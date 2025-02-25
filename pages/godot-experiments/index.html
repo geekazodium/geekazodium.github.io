@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<script>
+		//source: https://stackoverflow.com/questions/68609682/is-there-any-way-to-use-sharedarraybuffer-on-github-pages
+		self.addEventListener("fetch", function (event) {
+			if (event.request.cache === "only-if-cached" && event.request.mode !== "same-origin") {
+			  return;
+			}
+		  
+			event.respondWith(
+			  fetch(event.request)
+				.then(function (response) {
+				  const newHeaders = new Headers(response.headers);
+				  newHeaders.set("Cross-Origin-Embedder-Policy", "require-corp");
+				  newHeaders.set("Cross-Origin-Opener-Policy", "same-origin");
+		  
+				  const moddedResponse = new Response(response.body, {
+					status: response.status,
+					statusText: response.statusText,
+					headers: newHeaders,
+				  });
+		  
+				  return moddedResponse;
+				})
+				.catch(function (e) {
+				  console.error(e);
+				})
+			);
+		  });
+		</script>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 		<title></title>
