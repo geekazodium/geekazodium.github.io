@@ -137,6 +137,9 @@ const engine = new Engine(GODOT_CONFIG);
 	}
 
 	function displayFailureNotice(err) {
+		if (err.includes("Cross-Origin Isolation")){
+			window.URL = window.URL;
+		}
 		console.error(err);
 		if (err instanceof Error) {
 			setStatusNotice(err.message);
