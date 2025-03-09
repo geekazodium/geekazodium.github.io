@@ -138,7 +138,10 @@ const engine = new Engine(GODOT_CONFIG);
 
 	function displayFailureNotice(err) {
 		if (err.includes("Cross-Origin Isolation")){
-			window.URL = window.URL;
+			if (localStorage.getItem("coi-set-1") == null){
+				localStorage.setItem("coi-set-1", "true");
+				window.location.reload(false);
+			}
 		}
 		console.error(err);
 		if (err instanceof Error) {
