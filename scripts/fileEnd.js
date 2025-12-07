@@ -5,7 +5,8 @@ const aboutThis = [
         ["pages/projects.html","My Projects"]
     ],
     [
-        ["pages/underConstruction.html","Under Construction"],
+        ["pages/tools.html", "Tools I've Made"],
+        ["redirects/itch.html","My Itch.io"],
     ],
     [
         ["pages/contacts.html","Contact Me"]

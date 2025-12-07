@@ -5,52 +5,53 @@
     <link rel="stylesheet" href="../css/projects.css">
     <script src="../scripts/header.js"></script>
     <script src="../scripts/fileEnd.js"></script>
+    <script src="../scripts/projectView.js"></script>
+    <script>initProjectList([
+        {
+          image: "../assets/ChildOfEntropy.jpg",
+          href: "https://pearstar.itch.io/child-of-entropy",
+          title: "Child of entropy (Ludum Dare 56)"
+        },
+        {
+          image: "https://img.itch.zone/aW1nLzIzOTA3NzQ0LnBuZw==/315x250%23c/DlxR7c.png",
+          href: "https://meeeeeepking.itch.io/bad-roommate",
+          title: "Bad Roommate (RGDC halloween jam 2025)"
+        },
+        {
+          image: "../assets/noSpaghettiChecker.png",
+          href: "https://github.com/geekazodium/no-spaghetti-plugin",
+          title: "No-Spaghetti (Godot 4.3+ Plugin)"
+        },
+        {
+          image: "../assets/FlowerInTheRough.png",
+          href: "https://geekazodium.itch.io/flower-in-the-rough",
+          title: "Flower in the Rough (Platformer)"
+        },
+        {
+          image: "../assets/BioIAMarker.png",
+          href: "https://geekazodium.github.io/bio-ia-marker/",
+          title: "Biology IA Marker tool"
+        },
+        {
+          image: "../assets/betterLangReadme.png",
+          href: "https://github.com/geekazodium/better-lang-reader",
+          title: "Better Mc Language File Reader"
+        },
+        {
+          href: "https://github.com/geekazodium/geekazodium.github.io",
+          image: "../assets/thisSiteSource.png",
+          title: "this webpage"
+        },
+        {
+          href:"https://github.com/geekazodium/wynn-meow",
+          image: "../assets/WynnMeow.png",
+          title: "wynn meow"
+        }
+    ]);</script>
   </head>
   <body>
     <div class="page">
-      <ol class="projects">
-        <a href="https://pearstar.itch.io/child-of-entropy">
-          <li style='background-image: url("../assets/ChildOfEntropy.jpg");'>
-            <div>
-              Child of entropy (Ludum Dare 56)
-            </div>
-          </li>
-        </a>
-        <a href="https://geekazodium.itch.io/flower-in-the-rough">
-          <li style='background-image: url("../assets/FlowerInTheRough.png");'>
-            <div>
-              Flower in the Rough (Work in progress platformer)
-            </div>
-          </li>
-        </a>
-        <a href="https://geekazodium.github.io/bio-ia-marker/">
-          <li style='background-image: url("../assets/BioIAMarker.png");'>
-            <div>
-              Biology IA Marker tool
-            </div>
-          </li>
-        </a>
-        <a href="https://github.com/geekazodium/better-lang-reader">
-          <li style='background-image: url("../assets/betterLangReadme.png");'>
-            <div>
-              better lang reader
-            </div>
-          </li>
-        </a>
-        <a href="https://github.com/geekazodium/geekazodium.github.io">
-          <li style='background-image: url("../assets/thisSiteSource.png");'>
-            <div>
-              this webpage
-            </div>
-          </li>
-        </a>
-        <a href="https://github.com/geekazodium/wynn-meow">
-          <li style='background-image: url("../assets/WynnMeow.png");'>
-            <div>
-              wynn meow
-            </div>
-          </li>
-        </a>
+      <ol class="projects" id="projects">
       </ol>
     </div>
   </body>
