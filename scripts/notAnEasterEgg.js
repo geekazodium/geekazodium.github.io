@@ -2,10 +2,10 @@ window.addEventListener("DOMContentLoaded",event=>{
     contentLoaded = true;
     setTimeout(()=>{
         tooLate = true;
-        if(clickedTimes>10){
+        if(clickedTimes>6){
             easterEgg();
         }
-    },1000);
+    },2000);
 });
 
 window.addEventListener("mousedown",event=>{
