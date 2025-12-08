@@ -15,7 +15,8 @@
 }
 
 .projects a{
-    background-color:rgb(223, 143, 176);
+    --title-label-background: var(--page-boundary-color); 
+    --title-label-text-color: var(--text-default-color);
     margin: 20px;
     border-radius: 20px;
     width: calc(100% - 40px);
@@ -34,7 +35,10 @@
         margin-bottom: 15px;
     }
 }
+
 .projects a :hover{
+    --title-label-background: var(--background-hover-color); 
+    --title-label-text-color: var(--text-hover-color);
     animation-name: onHover;
     animation-duration: 0.2s;
     animation-direction: normal;
@@ -42,7 +46,6 @@
     margin-bottom: 15px;
     width: calc(100% + 30px);
     height: calc(100% + 30px);
-    background-color: rgb(207, 109, 147);
     border-radius: 20px;
 }
 
@@ -60,7 +63,6 @@
     text-transform: capitalize;
     text-decoration: none;
     font-size: large;
-    color: white;
     position: absolute;
     bottom: 0px;
     width: calc(100% - 20px);
@@ -68,7 +70,8 @@
     padding: 10px;
     border-bottom-right-radius: 18px;
     border-bottom-left-radius: 18px;
-    background-color:rgb(209, 120, 154);
+    background-color: var(--title-label-background);
+    color: var(--title-label-text-color);
 }
 
 .projects a li div:hover{
@@ -78,7 +81,6 @@
     width: calc(100% - 20px);
     max-height: 50px;
     height: min-content;
-    background-color:rgb(209, 120, 154);
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
     border-bottom-right-radius: 18px;
