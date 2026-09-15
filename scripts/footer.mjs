@@ -7,6 +7,7 @@ const page_footer_links = [
     [
         ["pages/tools.html", "Tools I've Made"],
         ["redirects/itch.html","My Itch.io"],
+        ["pages/graphicsPortfolio.html", "Technical Art Portfolio"]
     ],
     [
         ["pages/contacts.html","Contact Me"]
