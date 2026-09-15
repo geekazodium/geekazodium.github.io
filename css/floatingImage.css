@@ -1,0 +1,6 @@
+.float-right{
+    display: block;
+    float: right;
+    min-width: fit-content;
+    margin-left: 20px;
+}
