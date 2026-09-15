@@ -70,7 +70,7 @@ header ol a li{
     color: var(--maybe-hover-text-color);
 }
 
-.page{
+main{
     color: var(--text-default-color);
     background-color:var(--body-background-color);
     display: flex;
