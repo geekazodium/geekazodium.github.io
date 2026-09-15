@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>UNDER CONSTRUCTION!</title>
+        <title>Tech Art Portfolio</title>
         <meta name="viewport" content= "width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/floatingImage.css">
@@ -13,6 +13,11 @@
                 <h1>
                     Investigator Ghost
                 </h1>
+                <iframe class="float-right" frameborder="0" src="https://itch.io/embed/4330380" width="552" height="167">
+                    <a href="https://geekazodium.itch.io/spring-rgdc-game-jam-2026">
+                        Investigator Ghost by Geekazodium, Sumisuey
+                    </a>
+                </iframe>
                 <h5><i>
                     spring-rgdc-game-jam-2026 submission,
                     winner for best art category.
@@ -20,15 +25,41 @@
                 <h2>
                     notable contributions:
                 </h2>
-                <ul>
-                    <li>water shader</li>
-                </ul>
+                <h3>
+                    Water Shader
+                </h3>
+                <p>
+                    The water effects in this project are probably the most advanced
+                    part of the project. Here's the rundown.
+                    <br><br>
+                    Displacement: this is done by summing up a bunch of sine waves at
+                    different scales, and having the waves move forward seperately.
+                    <br><br>
+                    Ambient Color: the lighting model for the ambient color is computed
+                    seperately from specular, and does not account for the light soure,
+                    it instead blends the colors of 3 different factors. <b>elevation</b>, 
+                    the higher the vertical offset, the more likely it is for light to 
+                    bounce back out. <b>view normal</b>, less light reflects from water
+                    into the camera when looking at a grazing angle. <b>ambient</b> a
+                    constant value used to ensure not full darkness.
+                    <br><br>
+                    The above ambient model is highly inspired by the implemenatation of 
+                    sea of thieves.
+                    <br><br>
+                    However, this produces water that fakes some degree of photorealism,
+                    which does not match the stylized aim. to achieve the stylization,
+                    the luminance gets a noise texture added to it and then posterized 
+                    (but not the actual base color), and multiplied with the normalized 
+                    (by luminance) based color. this achieves a posterized look, but
+                    preserves slight differences in hue and saturation, as well as removing
+                    issues with the luminance resulting in color banding.  
+                    <br><br>
+                    The specular component of the lighting uses a standard reflected light
+                    equation with anisotrophy to more realistically replicate water's reflective
+                    properties. This brightness is theasholded to make the lighting produce
+                    hard edges, creating an effect more fitting of pixelart.
+                </p>
             </div>
-            <iframe class="floatRight" frameborder="0" src="https://itch.io/embed-upload/16633536?color=333333" allowfullscreen="" width="640" height="380">
-                <a href="https://geekazodium.itch.io/spring-rgdc-game-jam-2026">
-                    Play Investigator Ghost on itch.io
-                </a>
-            </iframe>
         </main>
     </body>
 </html>

@@ -74,6 +74,7 @@ main{
     color: var(--text-default-color);
     background-color:var(--body-background-color);
     display: flex;
+    flex-direction:column;
     align-content: center;
     margin-left: auto;
     margin-right: auto;
