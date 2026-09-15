@@ -5,14 +5,29 @@
         <meta name="viewport" content= "width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/floatingImage.css">
+        <link rel="stylesheet" href="/css/projects.css">
         <script src="/scripts/template.mjs" type="module"></script>
+        <script src="/scripts/projectView.js"></script>
+        <script>initProjectList([
+            // {
+            //     image: "../assets/",
+            //     href: "https://geekazodium.github.io/bio-ia-marker/",
+            //     title: "BIO IA MARKER"
+            // },
+            // {
+            //     image: "../assets/noSpaghettiChecker.png",
+            //     href: "https://github.com/geekazodium/no-spaghetti-plugin",
+            //     title: "No-Spaghetti (Godot 4.3+ Plugin)"
+            // }
+        ]);</script>
     </head>
     <body>
         <main>
+            <h1>Technical Art Portfolio</h1>
             <div>
-                <h1>
+                <h2>
                     Investigator Ghost
-                </h1>
+                </h2>
                 <iframe class="float-right" frameborder="0" src="https://itch.io/embed/4330380" width="552" height="167">
                     <a href="https://geekazodium.itch.io/spring-rgdc-game-jam-2026">
                         Investigator Ghost by Geekazodium, Sumisuey
@@ -59,6 +74,13 @@
                     properties. This brightness is theasholded to make the lighting produce
                     hard edges, creating an effect more fitting of pixelart.
                 </p>
+            </div>
+            <div>
+                <h2>
+                    Other Misc
+                </h2>
+                <ol class="projects" id="projects">
+                </ol>
             </div>
         </main>
     </body>
