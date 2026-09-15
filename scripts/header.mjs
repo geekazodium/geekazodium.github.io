@@ -1,13 +1,13 @@
-function geekaHeader(path){
+export function create_header(path){
     var header = `
-    <div class="header">
+    <header>
         <ol>
             <a href="index.html"><li>home</li></a>
             <a href="pages/aboutMe.html"><li>About Me</li></a>
             <a href="pages/projects.html"><li>My Projects</li></a>
             <a href="pages/tools.html"><li>My Tools</li></a>
         </ol>
-    </div>
+    </header>
     `;
     var h;
     header.split('a href="').forEach(s => {
@@ -19,8 +19,3 @@ function geekaHeader(path){
     });
     return h;
 }
-
-document.addEventListener("DOMContentLoaded",(event)=>{
-    let html = document.body.innerHTML;
-    document.body.innerHTML = geekaHeader(window.origin+"/")+html;
-});
