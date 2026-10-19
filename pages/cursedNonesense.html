@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geekazodium's Projects</title>
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/projects.css">
+    <script src="/scripts/template.mjs" type="module"></script>
+    <script src="../scripts/projectView.js"></script>
+    <script>
+    initProjectList([
+        {
+          image: "../assets/BioIAMarker.png",
+          href: "https://geekazodium.github.io/bio-ia-marker/",
+          title: "Biology IA Marker tool"
+        },
+        {
+          image: "../assets/betterLangReadme.png",
+          href: "https://github.com/geekazodium/better-lang-reader",
+          title: "Better Mc Language File Reader"
+        },
+        {
+          href: "https://github.com/geekazodium/geekazodium.github.io",
+          image: "../assets/thisSiteSource.png",
+          title: "this webpage"
+        },
+        {
+          href:"https://github.com/geekazodium/wynn-meow",
+          image: "../assets/WynnMeow.png",
+          title: "wynn meow"
+        }
+    ]);</script>
+  </head>
+  <body>
+    <main>
+      <ol class="projects" id="projects">
+      </ol>
+    </main>
+  </body>
+</html>

@@ -5,7 +5,6 @@ export function create_header(path){
             <a href="index.html"><li>home</li></a>
             <a href="pages/aboutMe.html"><li>About Me</li></a>
             <a href="pages/projects.html"><li>My Projects</li></a>
-            <a href="pages/tools.html"><li>My Tools</li></a>
         </ol>
     </header>
     `;

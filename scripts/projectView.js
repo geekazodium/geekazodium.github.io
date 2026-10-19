@@ -2,10 +2,10 @@
 
 const PROJECTS_LIST_CLASS_NAME = "projects";
 
-function initProjectList(projects){
+function initProjectList(projects, class_name){
     window.addEventListener("DOMContentLoaded", ()=>{
         console.log("attempting to load projects...");
-        let e = findProjectsElement();
+        let e = findProjectsElement(class_name);
         if (e == null){
             return;
         }
@@ -13,8 +13,14 @@ function initProjectList(projects){
         for(let c in projects){
             let project = projects[c];
             console.log(project)
+
+            let idString = "";
+            if (project.id !== null){
+                idString = `id=\"${project.id}\"`;
+            }
+
             const project_element = parser.parseFromString(`
-            <a href="${project.href}">
+            <a href="${project.href}" ${idString}>
                 <li style='background-image: url("${project.image}"); 
   background-repeat: no-repeat; background-size: cover;
   background-position: center; '>
@@ -29,6 +35,9 @@ function initProjectList(projects){
     });
 }
 
-function findProjectsElement(){
-    return document.getElementById(PROJECTS_LIST_CLASS_NAME);
+function findProjectsElement(override_name){
+    if(override_name == null){
+        return document.getElementById(PROJECTS_LIST_CLASS_NAME);
+    }
+    return document.getElementById(override_name);
 }

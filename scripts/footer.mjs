@@ -2,15 +2,16 @@ const page_footer_links = [
     [
         ["index.html","Home"],
         ["pages/aboutMe.html","About Me"],
-        ["pages/projects.html","My Projects"]
-    ],
-    [
-        ["pages/tools.html", "Tools I've Made"],
-        ["redirects/itch.html","My Itch.io"],
-        ["pages/graphicsPortfolio.html", "Technical Art Portfolio"]
-    ],
-    [
         ["pages/contacts.html","Contact Me"]
+    ],
+    [
+        ["pages/projects.html","My Projects"],
+        ["pages/techArtPortfolio.html", "Technical Art Portfolio"],
+        ["pages/tools.html", "Tools I've Made"],
+        ["pages/cursedNonesense.html","Projects (Unpolished)"],
+    ],
+    [
+        ["redirects/itch.html","My Itch.io"],
     ],
     [
     ],

@@ -22,6 +22,10 @@
     width: calc(100% - 40px);
 }
 
+#spotlighted-project{
+    grid-column: span 2;
+}
+
 @keyframes onHover{
     from{
         margin: 0px;
