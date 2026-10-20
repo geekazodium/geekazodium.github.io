@@ -8,13 +8,23 @@
     list-style: none;
 }
 
+#spotlighted-project{
+    grid-column: span 2;
+}
+
 @media only screen and (max-width: 720px) {
     .projects{
         grid-template-columns: 1fr;
     }
+    #spotlighted-project{
+        grid-column: span 1;
+    }
+    .projects>a>li>div>*{
+        display: none;
+    }
 }
 
-.projects a{
+.projects>a{
     --title-label-background: var(--page-boundary-color); 
     --title-label-text-color: var(--text-default-color);
     margin: 20px;
@@ -22,9 +32,6 @@
     width: calc(100% - 40px);
 }
 
-#spotlighted-project{
-    grid-column: span 2;
-}
 
 @keyframes onHover{
     from{
@@ -40,7 +47,7 @@
     }
 }
 
-.projects a :hover{
+.projects>a :hover{
     --title-label-background: var(--background-hover-color); 
     --title-label-text-color: var(--text-hover-color);
     animation-name: onHover;
@@ -53,7 +60,7 @@
     border-radius: 20px;
 }
 
-.projects a li{
+.projects>a>li{
     position:relative;
     height: 100%;
     min-height: 310px;
@@ -63,14 +70,14 @@
     background-size:cover;
 }
 
-.projects a li div{
+.projects>a>li>div{
     text-transform: capitalize;
     text-decoration: none;
     font-size: large;
     position: absolute;
     bottom: 0px;
     width: calc(100% - 20px);
-    max-height: 50px;
+    /* max-height: 50px; */
     padding: 10px;
     border-bottom-right-radius: 18px;
     border-bottom-left-radius: 18px;
@@ -78,12 +85,37 @@
     color: var(--title-label-text-color);
 }
 
-.projects a li div:hover{
+.projects>a>li>div>*{
+    pointer-events: none;
+    padding-bottom: 0px;
+    border-top: 2pt solid var(--title-label-text-color);
+    margin: 0px;
+}
+
+#spotlighted-project>li>div{
+    right:0px;
+    height: calc(100% - 20px);
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 18px;
+    width: min-content;
+    min-width: 220px
+    /* right: 0px;
+    bottom: 0px;
+    width: calc(100% - 20px);
+    /* max-height: 50px; 
+    padding: 10px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    background-color: var(--title-label-background);
+    color: var(--title-label-text-color); */
+}
+
+.projects>a>li>div:hover{
     animation-name: none;
     margin: 0px;
     margin-bottom: 0px;
     width: calc(100% - 20px);
-    max-height: 50px;
+    /* max-height: 50px; */
     height: min-content;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;

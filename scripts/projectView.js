@@ -15,9 +15,15 @@ function initProjectList(projects, class_name){
             console.log(project)
 
             let idString = "";
-            if (project.id !== null){
+            if (project.id !== undefined){
                 idString = `id=\"${project.id}\"`;
             }
+
+            let briefString = "";
+            if (project.brief !== undefined){
+                briefString = `<p>${project.brief}</p>`;
+            }
+
 
             const project_element = parser.parseFromString(`
             <a href="${project.href}" ${idString}>
@@ -26,6 +32,7 @@ function initProjectList(projects, class_name){
   background-position: center; '>
                     <div>
                         ${project.title}
+                        ${briefString}
                     </div>
                 </li>
             </a>`,
